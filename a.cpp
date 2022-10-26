@@ -3,7 +3,7 @@ using namespace std;
 
 #define ll long long
 
-// A. Technical Support
+// A. Technical Support 
 
 void solve() {
     int n;
