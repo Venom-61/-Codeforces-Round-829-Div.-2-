@@ -3,7 +3,7 @@ using namespace std;
 
 #define ll long long
 
-// C1. Make Nonzero Sum (easy version)  
+// C1. Make Nonzero Sum (easy version)   
 
 void solve() {
     int n;
