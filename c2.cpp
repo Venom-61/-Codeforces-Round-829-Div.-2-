@@ -3,6 +3,8 @@ using namespace std;
 
 #define ll long long 
 
+// C2. Make Nonzero Sum (hard version)
+
 void solve() {
     int n;             
     cin >> n;
