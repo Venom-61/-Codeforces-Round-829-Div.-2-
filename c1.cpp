@@ -8,14 +8,33 @@ using namespace std;
 void solve() {
     int n;
     cin >> n;
-    vector<int> a(n);
-    ll sum = 0;
-    for(auto &x : a) {
-        cin >> x;
-        sum += x;
+    vector<int> a(n + 1);
+
+    long long sum = 0;
+    for(int i = 1; i <= n; i++) {
+        cin >> a[i];
+        sum += a[i];
     }
 
-    cout << sum << "\n";
+    if(sum % 2 != 0) {
+        cout << "-1\n";
+        return ;
+    }
+
+    vector<pair<int, int>> ans;
+    for(int i = 2; i <= n; i += 2) {
+        if(a[i - 1] == a[i])
+            ans.push_back({i-1, i});
+        else {
+            ans.push_back({i-1, i-1});
+            ans.push_back({i, i});
+        }
+    }
+
+    cout << ans.size() << "\n";
+    for(auto x : ans) {
+        cout << x.first << " " << x.second << "\n";
+    }
 }
 
 int32_t main() {
